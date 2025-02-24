@@ -75,10 +75,12 @@ Isaac ROS cuMotion is also featured as part of [Isaac Manipulator](https://nvidi
 
 Please visit the [Isaac ROS Documentation](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_cumotion/index.html) to learn how to use this repository.
 
+---
+
 ## MoveIt 2 Warning
 When we run example for UR10e robot, we followed exact same tutorial with documentation, but cuMotion wasn't planning the path. We had 2 docker containers running:
-- 1. admin@user container, which we've executed with run_dev.sh (running rviz with moveit planner)
-- 2. second container is which we entered with `docker exec -it isaac_ros_dev-x86_64-container bash` command (running cuMotion server)
+- first, admin@user container, which we've executed with run_dev.sh (running rviz with moveit planner)
+- second container is which we entered with `docker exec -it isaac_ros_dev-x86_64-container bash` command (running cuMotion server)
 
 It turns out we have to install and export Cyclone DDS for them to establish connection with each other. It's a problem with ROS 2.
 
